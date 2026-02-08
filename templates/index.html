@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AI Neural Workspace</title>
+    <title>text summarizer</title>
     <style>
         :root { --accent: #8b5cf6; --success: #10b981; --danger: #f43f5e; --dark: #0f172a; --panel: #1e293b; }
         body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--dark); color: #f8fafc; margin: 0; padding: 20px; }
@@ -34,19 +34,19 @@
 
 <div class="dashboard">
     <div class="hero">
-        <h1>✨ AI NEURAL HUB</h1>
-        <p style="color: #64748b;">Ultra-Fast Document Summarization & Regional Translation</p>
+        <h1>TEXT SUMMARIZER</h1>
+        <p style="color: #64748b;">Ultra-Fast Text and Document Summarization & Langua Translation</p>
     </div>
 
     <div class="card">
         <h3 style="color:var(--accent); text-transform:uppercase; font-size:0.8rem;">Input Module</h3>
         <textarea id="textIn" placeholder="Type or paste text here..."></textarea>
         <div class="upload-trigger" onclick="document.getElementById('fileIn').click()">
-            <span id="fileLabel">📁 Drop PDF, DOCX, or TXT here</span>
+            <span id="fileLabel"> Drop PDF, DOCX, or TXT here</span>
             <input type="file" id="fileIn" hidden onchange="document.getElementById('fileLabel').innerText = this.files[0].name">
         </div>
-        <button class="btn btn-p" onclick="processAll()">⚡ Execute Neural Pipeline</button>
-        <div id="loading" class="loader">Neural Engine is Processing...</div>
+        <button class="btn btn-p" onclick="processAll()"> Summarize</button>
+        <div id="loading" class="loader">Processing...</div>
     </div>
 
     <div class="card">
@@ -61,14 +61,14 @@
     </div>
 
     <div class="card" style="border-top: 4px solid var(--success);">
-        <h3 style="color:var(--success); text-transform:uppercase; font-size:0.8rem;">Module 3: Regional Translation</h3>
+        <h3 style="color:var(--success); text-transform:uppercase; font-size:0.8rem;">Module 3: Language Translation</h3>
         <select id="langChoice" style="width:100%; padding:15px; border-radius:10px; background:#0f172a; color:white; border:1px solid #334155;">
             <option value="te">Telugu (తెలుగు)</option>
             <option value="hi">Hindi (हिंदी)</option>
             <option value="ta">Tamil (தமிழ்)</option>
             <option value="kn">Kannada (ಕನ್ನಡ)</option>
         </select>
-        <button class="btn btn-s" onclick="runTranslate()" style="margin-top:15px;">🌐 Translate Summary</button>
+        <button class="btn btn-s" onclick="runTranslate()" style="margin-top:15px;"> Translate Summary</button>
         <pre id="transOut" style="margin-top:20px; border-left: 5px solid var(--success);">...</pre>
     </div>
 </div>
